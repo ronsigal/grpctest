@@ -1,0 +1,39 @@
+syntax = "proto3";
+package org.jboss.resteasy.test.grpc;
+option java_package = "org.jboss.resteasy.test.grpc";
+option java_outer_classname = "CC1_proto";
+
+service CC1Service {
+  rpc m1 (org_jboss_resteasy_test_grpc___CC2) returns (String);
+  rpc m3 (org_jboss_resteasy_test_grpc___CC4) returns (String);
+  rpc m4 (Integer) returns (Boolean);
+  rpc m5 (Empty) returns (String);
+}
+
+message org_jboss_resteasy_test_grpc___CC2 {
+  int32 j = 1;
+  org_jboss_resteasy_test_grpc___CC3 cC3___super = 2;
+}
+
+message org_jboss_resteasy_test_grpc___CC4 {
+  string s = 3;
+  org_jboss_resteasy_test_grpc___CC5 cc5 = 4;
+}
+
+message org_jboss_resteasy_test_grpc___CC3 {
+  string s = 5;
+}
+
+message org_jboss_resteasy_test_grpc___CC5 {
+  int32 k = 6;
+}
+
+message Empty {}
+message Integer {int32  value = 7;}
+message Float   {float  value = 8;}
+message Char    {int32  value = 9;}
+message Long    {int64  value = 10;}
+message String  {string value = 11;}
+message Boolean {bool   value = 12;}
+message Double  {double value = 13;}
+message Short   {int32  value = 14;}
